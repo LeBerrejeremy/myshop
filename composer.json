@@ -45,7 +45,6 @@
         "doctrine/doctrine-fixtures-bundle": "^3.4"
     },
     "require-dev": {
-        "doctrine/doctrine-fixtures-bundle": "^3.4",
         "symfony/browser-kit": "^5.1",
         "symfony/css-selector": "^5.1",
         "symfony/debug-bundle": "^5.1",
@@ -91,6 +90,9 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
+        ],
+        "compile": [
+            "php bin/console doctrine:fixtures:load --no-interaction --env=PROD"
         ]
     },
     "conflict": {
